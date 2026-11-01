@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0a0a0b" />
+    <title>Acceso — CMDB</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <script type="module" src="../js/login.js"></script>
+  </head>
+  <body class="auth-page">
+    <header class="site-header">
+      <a class="brand" href="./index.html"><span class="brand-mark">C</span><span><strong>CMDB</strong><small>CARLOS MOVIES DATA BASE</small></span></a>
+      <a class="text-link" href="./index.html">← Volver al archivo</a>
+    </header>
+    <main class="auth-layout">
+      <aside class="auth-art">
+        <p class="eyebrow">PARA QUIENES VEN MÁS ALLÁ</p>
+        <h1>Las historias<br />nos <em>reúnen.</em></h1>
+        <p>Guarda lo que te conmueve. Comparte lo que te obsesiona.</p>
+        <div class="auth-art-caption">CMDB · ARCHIVE OF MOVING IMAGES</div>
+      </aside>
+      <section class="auth-panel">
+        <div class="auth-tabs" role="tablist">
+          <button class="auth-tab active" data-tab="login" role="tab" aria-selected="true">Iniciar sesión</button>
+          <button class="auth-tab" data-tab="register" role="tab" aria-selected="false">Crear cuenta</button>
+        </div>
+        <div class="alert hidden" id="auth-alert" role="alert"></div>
+
+        <form id="login-form" class="form-stack">
+          <div>
+            <p class="eyebrow">BIENVENIDO DE VUELTA</p>
+            <h2>Continúa tu <em>archivo.</em></h2>
+          </div>
+          <label>Correo electrónico
+            <input type="email" name="email" autocomplete="email" required maxlength="120" placeholder="tu@correo.com" />
+            <small data-error-for="email"></small>
+          </label>
+          <label>Contraseña
+            <input type="password" name="password" autocomplete="current-password" required minlength="8" maxlength="72" placeholder="Mínimo 8 caracteres" />
+            <small data-error-for="password"></small>
+          </label>
+          <button class="button button-primary button-wide" type="submit">Entrar al archivo <span>↗</span></button>
+        </form>
+
+        <form id="register-form" class="form-stack hidden">
+          <div>
+            <p class="eyebrow">UNA COMUNIDAD DE HISTORIAS</p>
+            <h2>Abre tu <em>archivo.</em></h2>
+          </div>
+          <label>Nombre de usuario
+            <input type="text" name="username" autocomplete="username" required minlength="3" maxlength="50" placeholder="¿Cómo te llamamos?" />
+            <small data-error-for="username"></small>
+          </label>
+          <label>Correo electrónico
+            <input type="email" name="email" autocomplete="email" required maxlength="120" placeholder="tu@correo.com" />
+            <small data-error-for="email"></small>
+          </label>
+          <label>Contraseña
+            <input type="password" name="password" autocomplete="new-password" required minlength="8" maxlength="72" placeholder="Al menos 8 caracteres" />
+            <small data-error-for="password"></small>
+          </label>
+          <label>Confirmar contraseña
+            <input type="password" name="confirmPassword" autocomplete="new-password" required minlength="8" maxlength="72" placeholder="Repite tu contraseña" />
+            <small data-error-for="confirmPassword"></small>
+          </label>
+          <button class="button button-primary button-wide" type="submit">Crear cuenta <span>↗</span></button>
+        </form>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <span>© <span data-year></span> CMDB</span>
+      <a class="text-link" href="./index.html">Volver al archivo ↑</a>
+    </footer>
+  </body>
+</html>
